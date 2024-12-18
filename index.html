@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small thing for Bekky</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Carousel Container -->
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <img src="hextechbackground3.jpg" alt="backgroundimage" class="carousel-image">
+        </div>
+    </div>
+    <div class="overlayhome">
+        <div class="envelope-container">
+            <img src="stillgifhextech.png" alt="envelope" class="active" id="myImg">
+        </div>
+        <div class="dial-button" onclick="playSound('soundeffect')">
+            <div class="openbutton">
+                <button id="myButton"> 
+                    <img src="upscaledopen.jpg" alt="envelope" class="openbutton">
+                </button>
+            </div>
+        </div>
+            
+    </div>
+
+    <audio id="soundeffect" src="opensoundeffect.mp3"></audio>
+
+    <script src="openbox.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+
+    <script>
+        function playSound(soundId) {
+            const sound = document.getElementById(soundId);
+            sound.currentTime = 0; // Rewind to the start
+            sound.play(); // Play the sound
+        }
+    </script>
+
+</body>
+</html>

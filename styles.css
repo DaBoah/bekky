@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+
+
+
+/* Carousel Styling */
+.carousel-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden; 
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(100vw * 6); /* Based on the number of images */
+}
+
+.carousel-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Overlay for Sticky Notes */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    color: white;
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling if sticky notes overflow */
+    display: flex;
+    justify-content: space-around;
+}
+
+.content {
+    background: rgba(240, 240, 240, 0.8);
+    border-style: solid;
+    border-color: rgba(137, 207, 240, 0.9);
+    border-width: 0.5rem;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow-y: auto; /* Allows scrolling if sticky notes overflow */
+}
+
+.letter {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.sticky-note {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: #333;
+    max-width: 100%;
+}
+
+img {
+    max-width: auto;
+    height: 18rem;
+    display: block;
+}
+
+.overlayhome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: white;
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling if sticky notes overflow */
+}
+
+.envelope-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15rem;
+}
+
+.envelope-container img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    max-width: 18rem;
+    height: 18rem;
+}
+
+.envelope-container img.active {
+    opacity: 1;
+}
+
+.openbutton {
+    max-width: auto;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+}
